@@ -65,6 +65,18 @@
             display: flex;
             justify-content: center;
         }
+        .flex-header {
+            display: flex;
+            justify-content: space-between;
+        }
+        .time {
+            margin-top: 20px;
+            margin-left: 50px;
+            width: 60%;
+        }
+        .weather {
+            margin-right: -20%;
+        }
         .flex-container>div {
             width: 250px;
             margin: 10px;
@@ -90,14 +102,43 @@
             padding-top: 25px;
             margin-bottom: 0;
         }
+        @media screen and (max-width: 991px) {
+            .flex-container {
+                flex-wrap: wrap;
+                justify-content: space-around;   
+            }
+            .flex-container>div {
+                width: 330px;
+            }
+        }
+        @media screen and (max-width: 746px) {
+            .flex-container {
+                flex-wrap: wrap;
+                justify-content: center;   
+            }
+            .flex-container>div {
+                width: 70%;
+            }
+            .brand {
+                margin-top: 9%;
+            }
+        }
     </style>
   </head>
   <body>
     <header>
         <nav class="navbar navbar-default">
         <div class="header container">
-            <div class="navbar-header">
-                <img class="brand" alt="Brand" src="./assets/brand.PNG">
+            <div class="flex-header">
+                <div class="navbar-header">
+                    <img class="brand" alt="Brand" src="./assets/brand.PNG">
+                </div>
+                <div class="navbar-header">
+                    <img class="brand time" alt="Brand" src="./assets/time.PNG">
+                </div>
+                <div class="navbar-header">
+                    <img class="brand weather" alt="Brand" src="./assets/weather.PNG">
+                </div>
             </div>
         </div>
         </nav>
