@@ -5,45 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script src="https://use.fontawesome.com/28ed0899f7.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdn.rawgit.com/monkeecreate/jquery.simpleWeather/master/jquery.simpleWeather.min.js"></script>
 <script type="text/javascript">
-  // Docs at http://simpleweatherjs.com
-  // v3.1.0
-//Docs at http://simpleweatherjs.com
 // Docs at http://simpleweatherjs.com
-
-/* Does your browser support geolocation? */
-if ("geolocation" in navigator) {
-  $('.js-geolocation').show();
-} else {
-  $('.js-geolocation').hide();
-}
-
-/* Where in the world are you? */
-$('.js-geolocation').on('click', function() {
-  navigator.geolocation.getCurrentPosition(function(position) {
-    loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
-  });
-});
-
-/*
-* Test Locations
-* Austin lat/long: 30.2676,-97.74298
-* Austin WOEID: 2357536
-*/
 $(document).ready(function() {
-  loadWeather('Seattle',''); //@params location, woeid
-});
-
-function loadWeather(location, woeid) {
   $.simpleWeather({
-    location: location,
-    woeid: woeid,
+    location: 'Austin, TX',
+    woeid: '',
     unit: 'f',
     success: function(weather) {
-      html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      html = '<p>'+weather.temp+'&deg;'+weather.units.temp+'</p>';
 
       $("#weather").html(html);
     },
@@ -51,59 +29,243 @@ function loadWeather(location, woeid) {
       $("#weather").html('<p>'+error+'</p>');
     }
   });
-}
+});
 
 </script>
 <style>
+#weather h2 {
+  margin: 0 0 8px;
+  color: #6b6b6b;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
 body {font-family: "Raleway", Arial, sans-serif}
 .w3-row img {margin-bottom: -8px}
-.time { margin-top: 7.55555555%; margin-bottom: 7.55555555%; }
-#weather { padding: 5.5555%; }
+#weather { padding-top: 8.5555%; }
 iframe {     margin-top: 10%; }
+    strong {
+        color: white;
+    }
+    #date {
+        margin-bottom: 2%;
+        font-size: 400%;
+        margin-top: 2%;
+        text-align: center;
+        color: white;
+        font-family: 'Lato', sans-serif;
+    }
+    .special {
+        font-size: 115%;
+        margin-bottom: 0;
+    }
+    .feature {
+      font-size: 250%;
+    }
+     .main, #main {
+        background-image: url("./assets/hero.jpg");
+        /* Full height */
+        height: 100%;
+        width: 100%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .feature, li {
+        text-align: center;
+        background-color: #3384af;
+        color: white;
+    }
+    .feature h1 {
+        color:white;
+        font-family: 'Lato', sans-serif;
+        font-weight:300;
+    }
+    ul {
+        padding: 0;
+    }
+    .flex-container {
+        display: flex;
+        justify-content: center;
+    }
+    .flex-container>div {
+        width: 350px;
+        margin: 10px;
+    }
+    .carousel-inner p {
+        font-weight: 300;
+        text-align: center;
+        color: #00588e;
+    }
+    .carousel-inner h1 {
+        font-size: 300%;
+        font-weight: 700;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #00588e;
+        padding-top: 15px;
+    }
+    .carousel-inner h1
+    .carousel-inner {
+        overflow: initial;
+    }
+    .carousel-indicators {
+        padding-top: 25px;
+        margin-bottom: 0;
+    }
+    @media screen and (max-width: 991px) {
+        .flex-container {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .flex-container>div {
+            width: 330px;
+        }
+    }
+    @media screen and (max-width: 746px) {
+        .flex-container {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .flex-container>div {
+            width: 70%;
+        }
+    }
 </style>
 <body>
 <!-- !PAGE CONTENT! -->
 <div class="w3-content" style="max-width:1500px">
   <!-- Header -->
-  <header class="w3-container w3-xlarge w3-padding-24">
+  <header class="w3-container w3-xxlarge">
     <div class="w3-row">
       <div class="w3-half">
         <a href="#" class="w3-left w3-button w3-white logo"><img src="./assets/brand.PNG" style="width:90%"></a>
       </div>
 
       <div class="w3-quarter w3-container">
-        <iframe class="w3-right" src="http://free.timeanddate.com/clock/i607wx0l/n4488/fn14/fs36/ftb/ts1" frameborder="0" width="208" height="45"></iframe>
+        <iframe class="w3-right" src="http://free.timeanddate.com/clock/i607wx0l/n4488/fn14/fs36/fc707070/ftb/ts1" frameborder="0" width="208" height="45"></iframe>
       </div>
       <div class="w3-quarter w3-container">
-        <img class="w3-right" src="./assets/weather.png"/>
+        <img style="margin-top:8%;" class="w3-right" src="./assets/weather.png"/>
         <div class="w3-right" id="weather"></div>
       </div>
     </div>
   </header>
 
-  <div class="w3-light-grey w3-padding-64 w3-center" id="about">
-    <h2>About</h2>
-    <img src="/w3images/boy.jpg" class="w3-image w3-padding-32" width="300" height="300">
-    <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
-      <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      <p class="w3-large w3-text-pink">Do not hesitate to contact me!</p>
-      <div class="w3-section">
-        <label><b>Name</b></label>
-        <input class="w3-input w3-border" type="text" required name="Name">
-      </div>
-      <div class="w3-section">
-        <label><b>Email</b></label>
-        <input class="w3-input w3-border" type="text" required name="Email">
-      </div>
-      <div class="w3-section">
-        <label><b>Message</b></label>
-        <input class="w3-input w3-border" required name="Message">
-      </div>
-      <button type="submit" class="w3-button w3-block w3-dark-grey">Send</button>
-    </form>
-    <br>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-  </div>
+  <section id="main">
+      <div class="main container">
+          <h1 id="date">Monday, August 21, 2017</h1>
+          <div class="flex-container">
+              <div class="feature">
+                  <h1>Breakfast</h1>
+                  <p class="special"><strong>Chef's Morning Special</strong></p>
+                  <ul style="list-style:none;">
+                      <li>Scrambled Eggs</li>
+                      <li>Boiled Eggs</li>
+                      <li>Oatmeal</li>
+                      <li>Bacon and Eggs</li>
+                      <li>Boiled Eggs</li>
+                      <li>Oatmeal</li>
+                      <li>Bacon and Eggs</li>
+                  </ul>
+                  <p><strong class="special">2nd Choice</strong></p>
+                  <ul style="list-style:none;">
+                      <li>Scrambled Eggs</li>
+                  </ul>
+              </div>
+              <div class="feature">
+                  <h1>Lunch</h1>
+                  <p class="special"><strong>Chef's Morning Special</strong></p>
+                  <ul style="list-style:none;">
+                      <li>Scrambled Eggs</li>
+                      <li>Boiled Eggs</li>
+                      <li>Oatmeal</li>
+                      <li>Bacon and Eggs</li>
+                      <li>Boiled Eggs</li>
+                      <li>Oatmeal</li>
+                      <li>Bacon and Eggs</li>
+                  </ul>
+                  <p><strong class="special">2nd Choice</strong></p>
+                  <ul style="list-style:none;">
+                      <li>Scrambled Eggs</li>
+                  </ul>
+              </div>
+              <div class="feature">
+                  <h1>Dinner</h1>
+                  <p class="special"><strong>Chef's Morning Special</strong></p>
+                  <ul style="list-style:none;">
+                      <li>Scrambled Eggs</li>
+                      <li>Boiled Eggs</li>
+                      <li>Oatmeal</li>
+                      <li>Bacon and Eggs</li>
+                      <li>Boiled Eggs</li>
+                      <li>Oatmeal</li>
+                      <li>Bacon and Eggs</li>
+                  </ul>
+                  <p><strong class="special">2nd Choice</strong></p>
+                  <ul style="list-style:none;">
+                      <li>Scrambled Eggs</li>
+                  </ul>
+              </div>
+              <div class="feature">
+                  <h1>Snacks</h1>
+                  <p class="special"><strong>Chef's Morning Special</strong></p>
+                  <ul style="list-style:none;">
+                      <li>Scrambled Eggs</li>
+                      <li>Boiled Eggs</li>
+                      <li>Oatmeal</li>
+                      <li>Bacon and Eggs</li><li>Boiled Eggs</li>
+                      <li>Oatmeal</li>
+                      <li>Bacon and Eggs</li>
+                  </ul>
+                  <p><strong class="special">2nd Choice</strong></p>
+                  <ul style="list-style:none;">
+                      <li>Scrambled Eggs</li>
+                  </ul>
+              </div>
+          </div>
+          <div style="background-color: #accfe2; height: auto; margin-top: 8px; margin-bottom: 20px;" id="myCarousel" class="carousel slide" data-ride="carousel">
+                  <!-- Carousel indicators -->
+                  <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                      <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol>
+                  <!-- Wrapper for carousel items -->
+                  <div class="carousel-inner">
+                      <div class="item active">
+                          <h1>Announcements</h1>
+                          <p style="font-size: 220%; width: 70%; margin-left:15%;margin-right:15%;">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem Ipsum
+                              Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem Ipsum
+                          </p>
+                          <br/>
+                          <br/>
+                      </div>
+                      <div class="item">
+                          <h1>Announcements 2</h1>
+                          <p style="font-size: 220%; max-width: 75%; width: 70%; margin-left:15%;margin-right:15%;">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem Ipsum</p>
+                          <br/>
+                          <br/>
+                      </div>
+                      <div class="item">
+                          <h1>Announcements 3</h1>
+                          <p style="font-size: 220%; max-width: 75%; width: 70%; margin-left:15%;margin-right:15%;"> Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem Ipsum</p>
+                          <br/>
+                          <br/>
+                      </div>
+                  </div>
+                  <!-- Carousel controls
+                  <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a> -->
+          </div>
+  </section>
 <!-- End Page Content -->
 </div>
 
