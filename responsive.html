@@ -61,7 +61,7 @@ iframe {     margin-top: 10%; }
         margin-bottom: 0;
     }
     .feature {
-      font-size: 250%;
+      font-size: 175%;
     }
      .main, #main {
         background-image: url("./assets/hero.jpg");
@@ -79,9 +79,13 @@ iframe {     margin-top: 10%; }
         color: white;
     }
     .feature h1 {
+        font-size:220%;
         color:white;
         font-family: 'Lato', sans-serif;
         font-weight:300;
+    }
+    .feature ul {
+        line-height: 110%;
     }
     ul {
         padding: 0;
@@ -100,9 +104,9 @@ iframe {     margin-top: 10%; }
         color: #00588e;
     }
     .carousel-inner h1 {
-        font-size: 300%;
+        font-size: 250%;
         font-weight: 700;
-        letter-spacing: 1.4px;
+        letter-spacing: 1px;
         text-transform: uppercase;
         text-align: center;
         color: #00588e;
@@ -166,10 +170,6 @@ iframe {     margin-top: 10%; }
                       <li>Scrambled Eggs</li>
                       <li>Boiled Eggs</li>
                       <li>Oatmeal</li>
-                      <li>Bacon and Eggs</li>
-                      <li>Boiled Eggs</li>
-                      <li>Oatmeal</li>
-                      <li>Bacon and Eggs</li>
                   </ul>
                   <p><strong class="special">2nd Choice</strong></p>
                   <ul style="list-style:none;">
@@ -183,10 +183,6 @@ iframe {     margin-top: 10%; }
                       <li>Scrambled Eggs</li>
                       <li>Boiled Eggs</li>
                       <li>Oatmeal</li>
-                      <li>Bacon and Eggs</li>
-                      <li>Boiled Eggs</li>
-                      <li>Oatmeal</li>
-                      <li>Bacon and Eggs</li>
                   </ul>
                   <p><strong class="special">2nd Choice</strong></p>
                   <ul style="list-style:none;">
@@ -200,10 +196,6 @@ iframe {     margin-top: 10%; }
                       <li>Scrambled Eggs</li>
                       <li>Boiled Eggs</li>
                       <li>Oatmeal</li>
-                      <li>Bacon and Eggs</li>
-                      <li>Boiled Eggs</li>
-                      <li>Oatmeal</li>
-                      <li>Bacon and Eggs</li>
                   </ul>
                   <p><strong class="special">2nd Choice</strong></p>
                   <ul style="list-style:none;">
@@ -217,9 +209,6 @@ iframe {     margin-top: 10%; }
                       <li>Scrambled Eggs</li>
                       <li>Boiled Eggs</li>
                       <li>Oatmeal</li>
-                      <li>Bacon and Eggs</li><li>Boiled Eggs</li>
-                      <li>Oatmeal</li>
-                      <li>Bacon and Eggs</li>
                   </ul>
                   <p><strong class="special">2nd Choice</strong></p>
                   <ul style="list-style:none;">
@@ -238,21 +227,20 @@ iframe {     margin-top: 10%; }
                   <div class="carousel-inner">
                       <div class="item active">
                           <h1>Announcements</h1>
-                          <p style="font-size: 220%; width: 70%; margin-left:15%;margin-right:15%;">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem Ipsum
-                              Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem Ipsum
+                          <p style="font-size: 160%; width: 70%; margin-left:15%;margin-right:15%;">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem
                           </p>
                           <br/>
                           <br/>
                       </div>
                       <div class="item">
                           <h1>Announcements 2</h1>
-                          <p style="font-size: 220%; max-width: 75%; width: 70%; margin-left:15%;margin-right:15%;">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem Ipsum</p>
+                          <p style="font-size: 160%; max-width: 75%; width: 70%; margin-left:15%;margin-right:15%;">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem</p>
                           <br/>
                           <br/>
                       </div>
                       <div class="item">
                           <h1>Announcements 3</h1>
-                          <p style="font-size: 220%; max-width: 75%; width: 70%; margin-left:15%;margin-right:15%;"> Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem Ipsum</p>
+                          <p style="font-size: 160%; max-width: 75%; width: 70%; margin-left:15%;margin-right:15%;"> Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum</p>
                           <br/>
                           <br/>
                       </div>
@@ -273,7 +261,7 @@ iframe {     margin-top: 10%; }
   // Docs at http://simpleweatherjs.com
   $(document).ready(function() {
   $.simpleWeather({
-    location: 'Austin, TX',
+    location: 'Los Angeles, CA',
     woeid: '',
     unit: 'f',
     success: function(weather) {
