@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<script src="https://use.fontawesome.com/28ed0899f7.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -12,38 +11,19 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdn.rawgit.com/monkeecreate/jquery.simpleWeather/master/jquery.simpleWeather.min.js"></script>
-<script type="text/javascript">
-// Docs at http://simpleweatherjs.com
-$(document).ready(function() {
-  $.simpleWeather({
-    location: 'Austin, TX',
-    woeid: '',
-    unit: 'f',
-    success: function(weather) {
-      html = '<p>'+weather.temp+'&deg;'+weather.units.temp+'</p>';
 
-      $("#weather").html(html);
-    },
-    error: function(error) {
-      $("#weather").html('<p>'+error+'</p>');
-    }
-  });
-});
-
-</script>
 <style>
-#weather h2 {
-  margin: 0 0 8px;
-  color: #6b6b6b;
-  font-size: 36px;
+.w3-container {
+  padding:0;
+}
+.gray {
+  color: #6e6f6f;
+  font-size: 100%;
   font-weight: bold;
-  text-align: center;
-  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+  margin:0;
 }
 body {font-family: "Raleway", Arial, sans-serif}
 .w3-row img {margin-bottom: -8px}
-#weather { padding-top: 8.5555%; }
 iframe {     margin-top: 10%; }
     strong {
         color: white;
@@ -93,6 +73,7 @@ iframe {     margin-top: 10%; }
     .flex-container {
         display: flex;
         justify-content: center;
+        align-items: baseline;
     }
     .flex-container>div {
         width: 350px;
@@ -141,22 +122,25 @@ iframe {     margin-top: 10%; }
 </style>
 <body>
 <!-- !PAGE CONTENT! -->
-<div class="w3-content" style="max-width:1500px">
+<div class="w3-content" style="max-width:500000000px;">
   <!-- Header -->
   <header class="w3-container w3-xxlarge">
     <div class="w3-row">
-      <div class="w3-half">
+      <div class="w3-col w3-container m6 w3-center">
         <a href="#" class="w3-left w3-button w3-white logo"><img src="./assets/brand.PNG" style="width:90%"></a>
       </div>
-
-      <div class="w3-quarter w3-container">
-        <iframe class="w3-right" src="http://free.timeanddate.com/clock/i607wx0l/n4488/fn14/fs36/fc707070/ftb/ts1" frameborder="0" width="208" height="45"></iframe>
+      <div class="w3-col w3-container m1 w3-center">
       </div>
-      <div class="w3-quarter w3-container">
-        <img style="margin-top:8%;" class="w3-right" src="./assets/weather.png"/>
-        <div class="w3-right" id="weather"></div>
+      <div class="w3-col w3-container m3 w3-center" style="padding-top: 2.22222222%;padding-bottom: 2.22222222%;">
+        <span class="w3-right gray">12:30 PM</span>
       </div>
-    </div>
+      <div class="w3-col w3-container m1 w3-center" style="padding-top: 2.1222222%;padding-bottom: 2.22222222%;">
+        <span class="w3-right gray">77'</span>
+      </div>
+      <div class="w3-col w3-container m1 w3-center">
+        <img src="./assets/weather.png"/>
+      </div>
+  </div>
   </header>
 
   <section id="main">
