@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -20,20 +20,25 @@
 .w3-content {width:100%; height:100%; margin:0;}
 .gray {
   color: #6e6f6f;
-  font-size: 100%;
+  font-size: 170%;
   font-weight: bold;
   margin:0;
 }
-body {font-family: "Lato",sans-serif; width:100%; height:100%; margin:0;}
+html, body{
+  padding: 0;
+  margin: 0;
+}
+html{ height: 100%;}
+
+body {font-family: "Merriweather",serif; width:100%; height:100%; margin:0; min-height: 100%;}
 strong { color: white; }
     #date {
         margin-bottom: 4%;
-        font-size: 500%;
+        font-size: 650%;
         margin-top: 4%;
         text-align: center;
         color: white;
         font-family: 'Lato', sans-serif;
-        font-size:bold;
     }
     .special {
         font-size: 115%;
@@ -41,21 +46,24 @@ strong { color: white; }
     }
     .feature {
       height:100%;
-      font-size: 175%;
+      font-size: 220%;
     }
     .feature, li {
         text-align: center;
         background-color: #3384af;
         color: white;
     }
+    .feature strong {
+      padding: 2%;
+    }
     .feature h1 {
-        font-size:220%;
+        font-size:230%;
         color:white;
-        font-family: 'Lato', sans-serif;
+        font-family: 'Merriweather', serif;
         font-weight:300;
     }
     .feature ul {
-        line-height: 110%;
+        line-height: 150%;
     }
     ul {
         padding: 0;
@@ -87,6 +95,7 @@ strong { color: white; }
     }
     @media screen and (max-width: 746px) {
     }
+
 </style>
 <body>
 <!-- !PAGE CONTENT! -->
@@ -121,10 +130,10 @@ strong { color: white; }
       <div class="w3-col w3-container m1 w3-center">
       </div>
       <div class="w3-col w3-container m3 w3-center" style="padding-top: 2.22222222%;padding-bottom: 2.22222222%;">
-        <span class="w3-center w3-right gray">12:30pm</span>
+        <span class="w3-center w3-right gray" style="font-family:'Merriweather',serif;">12:30pm</span>
       </div>
       <div class="w3-col w3-container m1 w3-center" style="padding-top: 2.1222222%;padding-bottom: 2.22222222%;">
-        <span style="float:right;" class="w3-center gray">77'</span>
+        <span style="float:right;" class="w3-center gray" style="font-family:'Merriweather',serif;">77'</span>
       </div>
       <div class="w3-col w3-container m1 w3-center">
         <img class="w3-center weather" src="./assets/weather.png"/>
@@ -134,7 +143,7 @@ strong { color: white; }
 
   <section id="main">
     <div class="main container-fluid">
-      <h1 id="date">Monday, August 21, 2017</h1>
+      <h1 id="date"><strong>Monday, August 21, 2017</strong></h1>
       <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
             <div class="feature">
@@ -249,10 +258,10 @@ strong { color: white; }
     var switchMilliseconds = 5000;
     // To add more images, continue the pattern below.
 
-    imageArray[0] = './assets/hero.jpg';
+    imageArray[0] = './assets/nature.jpg';
     imageArray[1] = './assets/autumn.jpg';
     imageArray[2] = './assets/forest.jpg';
-    imageArray[3] = './assets/nature.jpg';
+    imageArray[3] = './assets/hero.jpg';
 
     // No further customization needed in this JavaScript
 
@@ -261,7 +270,7 @@ strong { color: white; }
       document.getElementById('main').style.height='100%';
       document.getElementById('main').style.width='100%';
       document.getElementById('main').style.backgroundPosition= 'center';
-      document.getElementById('main').style.backgroundRepeat= 'no-repeat';
+      document.getElementById('main').style.backgroundRepeatY= 'repeat';
       document.getElementById('main').style.backgroundSize= 'cover';
     i++;
     if( i > (imageArray.length - 1) ) { i = 0; }
