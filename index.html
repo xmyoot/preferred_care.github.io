@@ -54,7 +54,7 @@ strong { color: white; }
         color: white;
     }
     .feature strong {
-      padding: 2%;
+      padding: 4%;
     }
     .feature h1 {
         font-size:230%;
@@ -69,6 +69,7 @@ strong { color: white; }
         padding: 0;
     }
     .carousel-inner p {
+        font-size:220%;
         font-weight: 300;
         text-align: center;
         color: #00588e;
@@ -90,11 +91,32 @@ strong { color: white; }
         padding-top: 25px;
         margin-bottom: 0;
     }
-    @media screen and (max-width: 991px) {
-
+    @media screen and (max-width: 737px) {
+        .gray {
+            font-size:90%;
+        }
     }
-    @media screen and (max-width: 746px) {
+     @media screen and (max-width: 1300px) {
+        .gray {
+            font-size:130%;
+        }
     }
+    @media screen and (max-width: 1200px) {
+        .gray {
+            font-size:120%;
+        }
+    } 
+    @media screen and (max-width: 1100px) {
+        .gray {
+            font-size:100%;
+        }
+    }
+     @media screen and (max-width: 1500px) {
+        .feature h1 {
+            font-size:170%;
+        }
+    }
+  
 
 </style>
 <body>
@@ -270,7 +292,7 @@ strong { color: white; }
       document.getElementById('main').style.height='100%';
       document.getElementById('main').style.width='100%';
       document.getElementById('main').style.backgroundPosition= 'center';
-      document.getElementById('main').style.backgroundRepeatY= 'repeat';
+      document.getElementById('main').style.backgroundRepeat= 'repeat-y';
       document.getElementById('main').style.backgroundSize= 'cover';
     i++;
     if( i > (imageArray.length - 1) ) { i = 0; }
