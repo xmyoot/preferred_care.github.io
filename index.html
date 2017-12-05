@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -30,23 +30,24 @@ html, body{
 }
 html{ height: 100%;}
 
-body {font-family: "Merriweather",serif; width:100%; height:100%; margin:0; min-height: 100%;}
+body {font-family: "Roboto", sans-serif; width:100%; height:100%; margin:0; min-height: 100%;}
 strong { color: white; }
     #date {
         margin-bottom: 4%;
-        font-size: 650%;
+        font-size: 400%;
         margin-top: 4%;
         text-align: center;
         color: white;
-        font-family: 'Lato', sans-serif;
+        font-family: 'Roboto', sans-serif;
     }
     .special {
-        font-size: 115%;
+        font-size: 100%;
         margin-bottom: 0;
     }
     .feature {
       height:100%;
-      font-size: 220%;
+      font-size: 200%;
+      padding-top: .33333%;
     }
     .feature, li {
         text-align: center;
@@ -57,9 +58,9 @@ strong { color: white; }
       padding: 4%;
     }
     .feature h1 {
-        font-size:230%;
+        font-size:215%;
         color:white;
-        font-family: 'Merriweather', serif;
+        font-family: 'Roboto', sans-serif;
         font-weight:300;
     }
     .feature ul {
@@ -98,7 +99,7 @@ strong { color: white; }
     }
      @media screen and (max-width: 1300px) {
         .gray {
-            font-size:130%;
+            font-size:120%;
         }
     }
     @media screen and (max-width: 1200px) {
@@ -113,7 +114,7 @@ strong { color: white; }
     }
      @media screen and (max-width: 1500px) {
         .feature h1 {
-            font-size:170%;
+            font-size:130%;
         }
     }
   
@@ -124,27 +125,6 @@ strong { color: white; }
 <div class="w3-content" style="max-width:500000000px;">
   <!-- Header -->
   <header class="w3-container w3-xxlarge">
-    <!--
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <a href="#" class="w3-left w3-button w3-white logo"><img src="./assets/brand.PNG" style="width:90%"></a>
-        </div>
-
-        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-
-        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"  style="padding-top: 2.22222222%;padding-bottom: 2.22222222%;">
-          <span class="w3-center gray">12:30 PM</span>
-        </div>
-        <div class="col-xs-6 col-sm-6 col-md-1 col-lg-1" style="padding-top: 2.1222222%;padding-bottom: 2.22222222%;">
-          <span class="w3-center gray">77'</span>
-        </div>
-        <div class="col-xs-6 col-sm-6 col-md-1 col-lg-1">
-          <img class="w3-center" class="weather" src="./assets/weather.png"/>
-        </div>
-      </div>
-    </div>
-  -->
     <div class="w3-row">
       <div class="w3-col w3-container m6 w3-center">
         <a href="#" class="w3-left w3-button w3-white logo"><img src="./assets/brand.PNG" style="width:90%"></a>
@@ -152,10 +132,10 @@ strong { color: white; }
       <div class="w3-col w3-container m1 w3-center">
       </div>
       <div class="w3-col w3-container m3 w3-center" style="padding-top: 2.22222222%;padding-bottom: 2.22222222%;">
-        <span class="w3-center w3-right gray" style="font-family:'Merriweather',serif;">12:30pm</span>
+        <span class="w3-center w3-right gray" style="font-family:'Roboto',sans-serif;">12:30pm</span>
       </div>
       <div class="w3-col w3-container m1 w3-center" style="padding-top: 2.1222222%;padding-bottom: 2.22222222%;">
-        <span style="float:right;" class="w3-center gray" style="font-family:'Merriweather',serif;">77'</span>
+        <span style="float:right;" class="w3-center gray" style="font-family:'Roboto',sans-serif;">77'</span>
       </div>
       <div class="w3-col w3-container m1 w3-center">
         <img class="w3-center weather" src="./assets/weather.png"/>
@@ -277,7 +257,7 @@ strong { color: white; }
     var imageArray = new Array(); // leave as is.
 
     // Specify number of milliseconds between image switches.
-    var switchMilliseconds = 5000;
+    var switchMilliseconds = 1000;
     // To add more images, continue the pattern below.
 
     imageArray[0] = './assets/nature.jpg';
@@ -289,8 +269,6 @@ strong { color: white; }
 
     function publishPicture(i) {
       document.getElementById('main').style.backgroundImage = 'url("'+imageArray[i]+'")';
-      document.getElementById('main').style.height='100%';
-      document.getElementById('main').style.width='100%';
       document.getElementById('main').style.backgroundPosition= 'center';
       document.getElementById('main').style.backgroundRepeat= 'repeat-y';
       document.getElementById('main').style.backgroundSize= 'cover';
