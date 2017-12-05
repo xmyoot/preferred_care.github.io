@@ -24,6 +24,9 @@
   font-weight: bold;
   margin:0;
 }
+header {
+    background-color:white;
+}
 html, body{
   padding: 0;
   margin: 0;
@@ -53,6 +56,8 @@ strong { color: white; }
         text-align: center;
         background-color: #3384af;
         color: white;
+        padding-left: 3%;
+        padding-right: 3%;
     }
     .feature strong {
       padding: 4%;
@@ -120,7 +125,7 @@ strong { color: white; }
   
 
 </style>
-<body>
+<body id="entire-page">
 <!-- !PAGE CONTENT! -->
 <div class="w3-content" style="max-width:500000000px;">
   <!-- Header -->
@@ -268,10 +273,10 @@ strong { color: white; }
     // No further customization needed in this JavaScript
 
     function publishPicture(i) {
-      document.getElementById('main').style.backgroundImage = 'url("'+imageArray[i]+'")';
-      document.getElementById('main').style.backgroundPosition= 'center';
-      document.getElementById('main').style.backgroundRepeat= 'repeat-y';
-      document.getElementById('main').style.backgroundSize= 'cover';
+      document.getElementById('entire-page').style.backgroundImage = 'url("'+imageArray[i]+'")';
+      document.getElementById('entire-page').style.backgroundPosition= 'center';
+      document.getElementById('entire-page').style.backgroundRepeat= 'no-repeat';
+      document.getElementById('entire-page').style.backgroundSize= 'cover';
     i++;
     if( i > (imageArray.length - 1) ) { i = 0; }
     setTimeout('publishPicture('+i+')',switchMilliseconds);
